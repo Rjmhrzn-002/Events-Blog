@@ -1,6 +1,9 @@
 const BlogList = ({ events, title }) => {
   const eventList = events.map((event) => (
-    <section className=" rounded-lg shadow-xl shadow-gray-300 flex items-center overflow-hidden">
+    <section
+      key={event.id}
+      className=" mb-4 w-full rounded-lg shadow-xl shadow-gray-300 flex items-center overflow-hidden"
+    >
       <div className="w-1/4 bg-white h-48">
         <img
           src="src/Components/netflix-bg.png"
@@ -30,11 +33,11 @@ const BlogList = ({ events, title }) => {
     </section>
   ));
   return (
-    <div className=" max-w-[940px] min-h-[500px] w-full mx-auto px-8 py-4 flex flex-col gap-4  overflow-y-auto">
-      <h1 className="text-2xl text-fuchsia-700 font-extrabold uppercase underline underline-offset-4">
+    <div>
+      <h1 className=" mb-4 text-2xl text-fuchsia-700 font-extrabold uppercase underline underline-offset-4 cursor-default">
         {title}
       </h1>
-      {eventList}
+      <div>{eventList}</div>
     </div>
   );
 };

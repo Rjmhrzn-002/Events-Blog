@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import Header from "./Components/Header";
 
 const Layout = ({ children }) => {
@@ -6,17 +5,10 @@ const Layout = ({ children }) => {
     <div>
       <header>
         <Header />
-        <nav>
-          <li>
-            <NavLink path="/" element={<Home />} />
-            Home
-          </li>
-          <li>
-            <NavLink path="/create" element={<Create />} />
-          </li>
-        </nav>
       </header>
-      <main>{children}</main>
+      <main className=" max-w-[940px] min-h-[500px] w-full mx-auto mt-6 px-8 py-2">
+        {children}
+      </main>
     </div>
   );
 };

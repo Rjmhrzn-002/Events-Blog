@@ -11,12 +11,20 @@ const Header = () => {
             </h1>
           </div>
           <div className="flex items-center gap-6">
-            <p id="line" className="text-lg font-semibold relative">
-              <NavLink to="/">Home</NavLink>
-            </p>
-            <p className="bg-fuchsia-800 text-white text-lg font-semibold px-4 py-2 rounded-lg cursor-pointer active:bg-fuchsia-600 active:scale-95">
-              <NavLink to="create">Add events</NavLink>
-            </p>
+            <NavLink
+              id="line"
+              className="text-lg font-semibold relative"
+              to="/"
+            >
+              Home
+            </NavLink>
+
+            <NavLink
+              className="bg-fuchsia-800 text-white text-lg font-semibold px-4 py-2 rounded-lg cursor-pointer active:bg-fuchsia-600 active:scale-95"
+              to="/create"
+            >
+              Add events
+            </NavLink>
           </div>
         </div>
       </header>

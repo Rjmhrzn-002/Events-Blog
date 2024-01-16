@@ -10,12 +10,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/">
-          <Layout children={<Home />} />
-        </Route>
-        <Route path="/create">
-          <Layout children={<Create />} />
-        </Route>
+        <Route path="/" element={<Layout children={<Home />} />} />
+        <Route path="/create" element={<Layout children={<Create />} />} />
       </Routes>
     </Router>
   );
